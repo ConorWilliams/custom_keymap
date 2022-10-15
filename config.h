@@ -1,0 +1,13 @@
+
+
+#pragma once
+
+#define COMBO_COUNT 2
+#define COMBO_TERM 30
+
+#define BOTH_SHIFTS_TURNS_ON_CAPS_WORD 1
+#define LAYER_LOCK_IDLE_TIMEOUT 60000  
+
+#define TAPPING_TERM 180
+#define IGNORE_MOD_TAP_INTERRUPT
+#define PERMISSIVE_HOLD
