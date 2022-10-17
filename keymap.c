@@ -46,7 +46,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [NAV] = LAYOUT(
                             __NON__,    __NON__,    __NON__,    KC_VOLD,     KC_VOLU,    __NON__,     __NON__,     __NON__,   
     _______,    KC_LGUI,    KC_LALT,    KC_LSFT,    KC_LCTL,    __NON__,     __NON__,    KC_LEFT,       KC_UP,     KC_RGHT,     CAPSWRD,     __NON__, 
-                C(KC_Z),    C(KC_X),    C(KC_C),    C(KC_V),    __NON__,     __NON__,    KC_HOME,     KC_DOWN,      KC_END,     __NON__,
+                C(KC_Z),    C(KC_X),    C(KC_C),    __NON__,     C(KC_V),     __NON__,    KC_HOME,     KC_DOWN,      KC_END,     __NON__,
                                                     __NON__,    _______,     LL_LOCK,    __NON__    
     )
 };
@@ -84,6 +84,9 @@ bool process_record_user(uint16_t keycode, keyrecord_t* record) {
 bool achordion_chord(uint16_t tap_hold_keycode, keyrecord_t* tap_hold_record, uint16_t other_keycode, keyrecord_t* other_record) {
   if (other_keycode == KC_0){
     // Bypass achordian for thumb key.
+    return true;
+  } else if (tap_hold_keycode == LT_ENT) {
+    // Bypass achordian for nav layer.
     return true;
   } else {
      // Otherwise, follow the opposite hands rule.
