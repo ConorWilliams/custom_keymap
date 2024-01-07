@@ -5,15 +5,10 @@
 
 #define __NON__ KC_NO
 
-#define LG LGUI_T
-#define LA LALT_T
-#define LS LSFT_T
-#define LC LCTL_T
-
-#define RG RGUI_T
-#define RA RALT_T
-#define RS RSFT_T
-#define RC RCTL_T
+#define MG LGUI_T
+#define MA LALT_T
+#define MS LSFT_T
+#define MC LCTL_T
 
 #define SYM_D LT(SYM, KC_D)
 #define SYM_H LT(SYM, KC_H)
@@ -40,7 +35,7 @@ enum layers {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [BASE] = LAYOUT(
                               KC_W,     KC_F,     KC_P,   KC_B,        KC_J,        KC_L,        KC_U,        KC_Y,     
-     KC_TAB,    LG(KC_A), LA(KC_R), LS(KC_S), LC(KC_T),   KC_G,        KC_M,    RC(KC_N),    RS(KC_E),    RA(KC_I),    RG(KC_O), KC_BSPC,    
+     KC_TAB,    MG(KC_A), MA(KC_R), MS(KC_S), MC(KC_T),   KC_G,        KC_M,    MC(KC_N),    MS(KC_E),    MA(KC_I),    MG(KC_O), KC_BSPC,    
                     KC_Z,     KC_X,     KC_C,    SYM_D,   KC_V,        KC_K,       SYM_H,     KC_COMM,      KC_DOT,     KC_SLSH,
                                                  ENTER,  SPACE,       SPACE,       ENTER
     ),
@@ -58,7 +53,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     ), 
     [NUM] = LAYOUT(
                               KC_4,     KC_5,     KC_6, __NON__,     __NON__,    KC_CIRC,     KC_LABK,     KC_RABK, 
-    _______,    LG(KC_0), LA(KC_1), LS(KC_2), LC(KC_3),  KC_DOT,     __NON__, RC(KC_EQL), RS(KC_SCLN), RA(KC_MINS), RG(KC_QUOT), _______, 
+    _______,    MG(KC_0), MA(KC_1), MS(KC_2), MC(KC_3),  KC_DOT,     __NON__, MC(KC_EQL), MS(KC_SCLN), MA(KC_MINS), MG(KC_QUOT), _______, 
                  __NON__,     KC_7,     KC_8,     KC_9, __NON__,     __NON__,    KC_PLUS,     KC_EXLM,     KC_ASTR,     KC_SLSH,
                                                _______, _______,     _______,    _______    
     )
