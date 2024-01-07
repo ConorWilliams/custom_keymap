@@ -61,12 +61,12 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 // clang-format on
 
-const uint16_t PROGMEM xc_low_left[]  = {KC_X, KC_C, COMBO_END};
-const uint16_t PROGMEM cd_low_right[] = {KC_COMM, KC_DOT, COMBO_END};
+const uint16_t PROGMEM lo_left_mid[]  = {KC_X, KC_C, COMBO_END};
+const uint16_t PROGMEM lo_right_mid[] = {KC_COMM, KC_DOT, COMBO_END};
 
 combo_t key_combos[COMBO_COUNT] = {
-    COMBO(xc_low_left, KC_Q),
-    COMBO(cd_low_right, KC_ESC),
+    COMBO(lo_left_mid, KC_Q),
+    COMBO(lo_right_mid, KC_ESC),
 };
 
 // Use bilateral combinations, this requires opposite hands for home row mods.
